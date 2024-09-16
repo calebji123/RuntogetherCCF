@@ -192,4 +192,9 @@ export const LINKS = [
     label: "UTCCF",
     link: "https://www.utccf.com",
   },
+  {
+    label: "run together management",
+    link: "https://docs.google.com/document/d/1wpfALbL7rFMn8f0FzeuDIGjSLTVhs9vcF2x2c945_ko/edit#heading=h.d3ehevr7bm7w"
+  },
 ];
+
