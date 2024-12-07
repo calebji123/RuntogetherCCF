@@ -1,0 +1,20 @@
+/*Not sure if this work is all redundant lol*/
+
+.ckimMainWrapper {
+    background-color: #f4f4f4;
+    width: 100%;
+    min-width: 400px;
+    padding: 10px;
+}
+
+.marginReset {
+    margin: 0px;
+}
+
+.padding50 {
+    padding: 50px;
+}
+
+.margin50 {
+    margin: 50px;
+}
