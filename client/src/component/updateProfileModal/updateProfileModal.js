@@ -18,6 +18,7 @@ const UpdateProfileModal = ({ person, open, onClose, parent }) => {
     person.yearsFollowingChrist
   );
   const [ccfYear, setCcfYear] = useState(person.yearsInCCF);
+  const [profilePic, setProfilePic] = useState(person.profilePic);
   const [page, setPage] = useState(0);
   const { name } = person;
   const largeScreen = useMediaQuery(CCF_THEME.breakpoints.up("sm"));
@@ -38,6 +39,7 @@ const UpdateProfileModal = ({ person, open, onClose, parent }) => {
       churchYear,
       followingChristYear,
       ccfYear,
+      profilePic,
       parent
     );
     setPage(page + 1);
@@ -80,12 +82,14 @@ const UpdateProfileModal = ({ person, open, onClose, parent }) => {
               churchYear={churchYear}
               followingChristYear={followingChristYear}
               ccfYear={ccfYear}
+              profilePic={profilePic}
               setYearOfStudy={setYearOfStudy}
               setProgramName={setProgramName}
               setChurchName={setChurchName}
               setChurchYear={setChurchYear}
               setFollowingChristYear={setFollowingChristYear}
               setCcfYear={setCcfYear}
+              setProfilePic={setProfilePic}
             />
           ) : (
             <ElectionInfoModal

@@ -110,3 +110,38 @@ export const login = (user, page) => {
       console.log(err);
     });
 };
+
+export const adminLogin = (page) => {
+  // Hard code to Neo Lou's id
+  const url = `${API_HOST}/users/user/113766403572883493256`;
+
+  const request = new Request(url, {
+    method: "get",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+  });
+
+  fetch(request)
+    .then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      } else {
+        return res.text();
+      }
+    })
+    .then((res) => {
+      if (typeof res === "object") {
+        page.setState({
+          user: res,
+        });
+        return;
+      } else {
+        return;
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

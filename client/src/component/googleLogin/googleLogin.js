@@ -1,16 +1,23 @@
 import { GoogleLogin } from "@react-oauth/google";
-import { login } from "../../actions/loadInfo";
+import { adminLogin, login } from "../../actions/loadInfo";
 import { jwtDecode } from "jwt-decode";
+import GenericButton from "../genericButton/genericButton";
+import { Typography } from "@mui/material";
 
 
 const GoogleLoginButton = ({ parent }) => {
     return (
-        <GoogleLogin
-            onSuccess={(response) => { login(jwtDecode(response.credential), parent)}}
-            onError={(error) => { console.log(error); }}
-            auto_select
-            useOneTap
-          />
+        // <GoogleLogin
+        //     onSuccess={(response) => { login(jwtDecode(response.credential), parent)}}
+        //     onError={(error) => { console.log(error); }}
+        //     auto_select
+        //     useOneTap
+        //   />
+
+        <GenericButton color="action" onClick={() => { adminLogin(parent) }}>
+            <Typography variant="h4">Admin Login</Typography>
+        </GenericButton>
+        
     )
 }
 

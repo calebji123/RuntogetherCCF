@@ -16,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const userRouter = require("../routes/users");
+const userRouter = require("./routes/users");
 
 app.use("/users", userRouter);
 
